@@ -1,10 +1,17 @@
 import globals from "globals";
+import typescriptEslint from "typescript-eslint";
 
-import configs from "./configs.js";
-import declarations from "./declarations.js";
-import global from "./global.js";
-import tests from "./tests.js";
+import configsConfig from "./configs.js";
+import declarationsConfig from "./declarations.js";
+import globalConfig from "./global.js";
+import testsConfig from "./tests.js";
 
-export { globals as _globals, global, configs, declarations, tests };
-
-export default [global, configs, declarations, tests];
+export { globals };
+export const declareConfig = typescriptEslint.config;
+export default [globalConfig, configsConfig, declarationsConfig, testsConfig];
+export const configs = {
+	global: globalConfig,
+	configs: configsConfig,
+	declarations: declarationsConfig,
+	tests: testsConfig,
+};

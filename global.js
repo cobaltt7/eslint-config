@@ -3,7 +3,7 @@ import unicorn from "eslint-plugin-unicorn";
 import typescriptEslint from "typescript-eslint";
 
 export default typescriptEslint.config(
-	js.configs.all,
+	{ ...js.configs.all, name: "eslint/js/all" },
 	...typescriptEslint.configs.all,
 	unicorn.configs["flat/all"],
 	{
