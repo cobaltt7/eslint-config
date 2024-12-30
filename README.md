@@ -56,7 +56,7 @@ My ESLint style guide
    the last object containing `languageOptions`. The `globals` package is re-exported in `eslint-config-cobaltt7`, so it
    is unneccessary to reinstall it to modify globals. Simply import it like so:
 
-    ```js
+    ```javascript
     import { globals } from "eslint-config-cobaltt7";
     ```
 
@@ -72,7 +72,7 @@ Congrats! You've successfully integrated ESLint into your project with `eslint-c
 
 The following configs are exported from this package independently:
 
-```js
+```javascript
 import { configs } from "eslint-config-cobaltt7";
 
 configs.global;

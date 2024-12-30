@@ -3,7 +3,7 @@ import unicorn from "eslint-plugin-unicorn";
 import typescriptEslint from "typescript-eslint";
 
 export default typescriptEslint.config(
-	{ ...js.configs.all, name: "eslint/js/all" },
+	{ name: "eslint/js/all", ...js.configs.all },
 	...typescriptEslint.configs.all,
 	unicorn.configs["flat/all"],
 	{
@@ -33,8 +33,8 @@ export default typescriptEslint.config(
 				"error",
 				{
 					custom: { match: false, regex: /\d/u.source },
-					format: ["camelCase", "UPPER_CASE", "PascalCase"],
-					selector: ["variable", "import"],
+					format: ["camelCase", "PascalCase", "UPPER_CASE"],
+					selector: ["import", "variable"],
 				},
 				{
 					custom: { match: false, regex: /\d/u.source },
@@ -43,7 +43,7 @@ export default typescriptEslint.config(
 				},
 				{
 					custom: { match: false, regex: /\d/u.source },
-					filter: { match: false, regex: /^_+$/u.source },
+					leadingUnderscore: "allow",
 					format: ["camelCase"],
 					selector: "parameter",
 				},
@@ -55,10 +55,17 @@ export default typescriptEslint.config(
 				{
 					custom: { match: false, regex: /\d/u.source },
 					format: ["PascalCase"],
-					selector: ["typeLike", "enumMember"],
+					selector: ["enumMember", "typeLike"],
+				},
+				{
+					custom: { match: false, regex: /^T[A-Z]|\d/u.source },
+					format: ["PascalCase"],
+					leadingUnderscore: "allow",
+					selector: ["typeParameter"],
 				},
 			],
 			"@typescript-eslint/no-deprecated": "warn",
+			"@typescript-eslint/no-empty-object-type": ["error", { allowInterfaces: "always" }],
 			"@typescript-eslint/no-floating-promises": ["error", { checkThenables: true }],
 			"@typescript-eslint/no-magic-numbers": [
 				"off", // TODO
@@ -83,7 +90,7 @@ export default typescriptEslint.config(
 			"@typescript-eslint/no-unsafe-type-assertion": "off",
 			"@typescript-eslint/no-unused-vars": [
 				"error",
-				{ args: "all", argsIgnorePattern: /^_+$/u.source, reportUsedIgnorePattern: true },
+				{ args: "all", argsIgnorePattern: /^_/u.source, reportUsedIgnorePattern: true },
 			],
 			"@typescript-eslint/no-use-before-define": "off",
 			"@typescript-eslint/parameter-properties": ["error", { prefer: "parameter-property" }],

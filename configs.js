@@ -5,6 +5,7 @@ export default typescriptEslint.config({
 	files: ["**/*.config.js"],
 	rules: {
 		"id-match": "off",
+		"sort-keys": ["error", "asc", { caseSensitive: false, natural: true }],
 		"unicorn/prevent-abbreviations": "off",
 		"unicorn/string-content": "off",
 	},

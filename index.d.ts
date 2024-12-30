@@ -1,7 +1,8 @@
-import globals from "globals";
-import { config, FlatConfig } from "typescript-eslint";
+import type { config, ConfigArray } from "typescript-eslint";
 
-declare const configArray: FlatConfig.ConfigArray;
+import globals from "globals";
+
+declare const configArray: ConfigArray;
 
 export declare const declareConfig: typeof config;
 export { globals };
@@ -13,5 +14,5 @@ export namespace configs {
 	export { configArray as tests };
 }
 
-declare const _default: FlatConfig.ConfigArray[];
+declare const _default: ConfigArray[];
 export default _default;
