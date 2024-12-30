@@ -90,7 +90,7 @@ export default typescriptEslint.config(
 			"@typescript-eslint/no-unsafe-type-assertion": "off",
 			"@typescript-eslint/no-unused-vars": [
 				"error",
-				{ args: "all", argsIgnorePattern: /^_/u.source, reportUsedIgnorePattern: true },
+				{ args: "all", argsIgnorePattern: /^_+$/u.source, reportUsedIgnorePattern: true },
 			],
 			"@typescript-eslint/no-use-before-define": "off",
 			"@typescript-eslint/parameter-properties": ["error", { prefer: "parameter-property" }],
