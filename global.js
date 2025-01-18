@@ -11,6 +11,11 @@ export default typescriptEslint.config(
 		linterOptions: { reportUnusedDisableDirectives: "error" },
 		rules: {
 			"@typescript-eslint/consistent-return": "off",
+			"@typescript-eslint/consistent-type-assertations": ["error", {
+    arrayLiteralTypeAssertions: 'allow-as-parameter',
+    objectLiteralTypeAssertions: 'allow-as-parameter',
+  },
+],
 			"@typescript-eslint/consistent-type-definitions": ["error", "type"],
 			"@typescript-eslint/explicit-function-return-type": [
 				"error",
