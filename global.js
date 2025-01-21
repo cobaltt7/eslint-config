@@ -11,7 +11,7 @@ export default typescriptEslint.config(
 		linterOptions: { reportUnusedDisableDirectives: "error" },
 		rules: {
 			"@typescript-eslint/consistent-return": "off",
-			"@typescript-eslint/consistent-type-assertations": [
+			"@typescript-eslint/consistent-type-assertions": [
 				"error",
 				{
 					arrayLiteralTypeAssertions: "allow-as-parameter",
