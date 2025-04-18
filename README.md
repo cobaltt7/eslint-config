@@ -29,10 +29,7 @@ My ESLint style guide
 
     export default declareConfig({ files: ["**/*.ts"] }, ...cobaltConfigs, {
     	languageOptions: {
-    		parserOptions: {
-    			projectService: true,
-    			tsconfigRootDir: path.dirname(fileURLToPath(import.meta.url)),
-    		},
+    		parserOptions: { projectService: true, tsconfigRootDir: path.dirname(fileURLToPath(import.meta.url)) },
     	},
     });
     ```
