@@ -25,9 +25,9 @@
 		"typescript-eslint": "8.22.0"
 	},
 	"devDependencies": {
-		"@redguy12/prettier-config": "3.2.1",
+		"@redguy12/prettier-config": "3.3.0",
 		"eslint": "9.18.0",
-		"prettier": "3.4.2"
+		"prettier": "3.5.3"
 	},
 	"peerDependencies": {
 		"eslint": "^9.12"
