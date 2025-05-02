@@ -33,10 +33,7 @@ My ESLint style guide
     	...cobaltConfigs,
     	{
     		languageOptions: {
-    			parserOptions: {
-    				projectService: true,
-    				tsconfigRootDir: path.dirname(fileURLToPath(import.meta.url)),
-    			},
+    			parserOptions: { projectService: true, tsconfigRootDir: path.dirname(fileURLToPath(import.meta.url)) },
     		},
     	},
     ]);

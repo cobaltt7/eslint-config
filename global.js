@@ -2,10 +2,6 @@ import js from "@eslint/js";
 import unicorn from "eslint-plugin-unicorn";
 import typescriptEslint from "typescript-eslint";
 
-
-
-
-
 export default typescriptEslint.config(
 	{ name: "eslint/js/all", ...js.configs.all },
 	...typescriptEslint.configs.all,
