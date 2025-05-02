@@ -25,33 +25,47 @@ My ESLint style guide
     import path from "node:path";
     import { fileURLToPath } from "node:url";
 
-    import cobaltConfigs, { declareConfig } from "eslint-config-cobaltt7";
+    import cobaltConfigs from "eslint-config-cobaltt7";
+    import { defineConfig } from "eslint/config";
 
-    export default declareConfig({ files: ["**/*.ts"] }, ...cobaltConfigs, {
-    	languageOptions: {
-    		parserOptions: { projectService: true, tsconfigRootDir: path.dirname(fileURLToPath(import.meta.url)) },
+    export default defineConfig([
+    	{ files: ["./**/*.ts"] },
+    	...cobaltConfigs,
+    	{
+    		languageOptions: {
+    			parserOptions: {
+    				projectService: true,
+    				tsconfigRootDir: path.dirname(fileURLToPath(import.meta.url)),
+    			},
+    		},
     	},
-    });
+    ]);
     ```
 
-4. Add `ignores` globs to omit certain files or folders from being linted, for example:
+4. Add `globalIgnores` globs to omit certain files or folders from being linted, for example:
 
     ```diff
-    @@ -5,6 +5,7 @@
+    @@ -1,10 +1,12 @@
+     import path from "node:path";
+     import { fileURLToPath } from "node:url";
 
-     export default declareConfig(
-     	{ files: ["**/*.ts"] },
-    +	{ ignores: ["dist"] },
+     import cobaltConfigs, { declareConfig } from "eslint-config-cobaltt7";
+    -import { defineConfig } from "eslint/config";
+    +import { defineConfig, globalIgnores } from "eslint/configs";
+
+     export default defineConfig([
+     	{ files: ["./**/*.ts"] },
+    +	globalIgnores(["./dist"]),
      	...cobaltConfigs,
      	{
      		languageOptions: {
     ```
 
-    Make sure to put `ignores` in its own object and in the position indicated.
+    Make sure to put `globalIgnores` in the position indicated.
 
 5. Edit project-specific configuration, i.e. `languageOptions`, `rules`, and etcetera. Put all configuration in or after
    the last object containing `languageOptions`. The `globals` package is re-exported in `eslint-config-cobaltt7`, so it
-   is unneccessary to reinstall it to modify globals. Simply import it like so:
+   is unneccessary to reinstall it to modify global variables. Simply import it like so:
 
     ```javascript
     import { globals } from "eslint-config-cobaltt7";

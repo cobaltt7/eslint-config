@@ -1,3 +1,4 @@
+import { defineConfig } from "eslint/config";
 import globals from "globals";
 import typescriptEslint from "typescript-eslint";
 
@@ -7,6 +8,7 @@ import globalConfig from "./global.js";
 import testsConfig from "./tests.js";
 
 export { globals };
+/** @deprecated Use {@link defineConfig} */
 export const declareConfig = typescriptEslint.config;
 export default [globalConfig, configsConfig, declarationsConfig, testsConfig];
 export const configs = {

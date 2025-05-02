@@ -2,14 +2,25 @@ import js from "@eslint/js";
 import unicorn from "eslint-plugin-unicorn";
 import typescriptEslint from "typescript-eslint";
 
+
+
+
+
 export default typescriptEslint.config(
 	{ name: "eslint/js/all", ...js.configs.all },
 	...typescriptEslint.configs.all,
-	unicorn.configs["flat/all"],
+	unicorn.configs.all,
 	{
 		name: "cobaltt7/global",
-		linterOptions: { reportUnusedDisableDirectives: "error" },
+		linterOptions: {
+			reportUnusedDisableDirectives: "error",
+			reportUnusedInlineConfigs: "error",
+		},
 		rules: {
+			"@typescript-eslint/class-methods-use-this": [
+				"error",
+				{ ignoreOverrideMethods: true, ignoreClassesThatImplementAnInterface: true },
+			],
 			"@typescript-eslint/consistent-return": "off",
 			"@typescript-eslint/consistent-type-assertions": [
 				"error",
@@ -19,6 +30,10 @@ export default typescriptEslint.config(
 				},
 			],
 			"@typescript-eslint/consistent-type-definitions": ["error", "type"],
+			"@typescript-eslint/explicit-module-boundary-types": [
+				"error",
+				{ allowOverloadFunctions: true },
+			],
 			"@typescript-eslint/explicit-function-return-type": [
 				"error",
 				{
@@ -74,6 +89,7 @@ export default typescriptEslint.config(
 			"@typescript-eslint/no-deprecated": "warn",
 			"@typescript-eslint/no-empty-object-type": ["error", { allowInterfaces: "always" }],
 			"@typescript-eslint/no-floating-promises": ["error", { checkThenables: true }],
+			"@typescript-eslint/no-invalid-void-type": ["error", { allowAsThisParameter: true }],
 			"@typescript-eslint/no-magic-numbers": [
 				"off", // TODO
 				{
@@ -92,6 +108,10 @@ export default typescriptEslint.config(
 			"@typescript-eslint/no-shadow": [
 				"error",
 				{ builtinGlobals: true, ignoreOnInitialization: true },
+			],
+			"@typescript-eslint/no-unnecessary-type-assertion": [
+				"error",
+				{ checkLiteralConstAssertions: true },
 			],
 			"@typescript-eslint/no-unsafe-member-access": "off",
 			"@typescript-eslint/no-unsafe-type-assertion": "off",
@@ -128,6 +148,10 @@ export default typescriptEslint.config(
 				},
 			],
 			"@typescript-eslint/typedef": "off",
+			"@typescript-eslint/unified-signatures": [
+				"error",
+				{ ignoreDifferentlyNamedParameters: true, ignoreOverloadsWithDifferentJSDoc: true },
+			],
 			"@typescript-eslint/use-unknown-in-catch-callback-variable": "off",
 			"camelcase": "off",
 			"capitalized-comments": "off",
@@ -190,19 +214,23 @@ export default typescriptEslint.config(
 			"sort-imports": "off",
 			"sort-keys": "off",
 			"unicorn/catch-error-name": ["error", { ignore: [/(?:E|^e)rror(?:[^a-z]|$)/u] }],
+			"unicorn/consistent-assert": "off",
 			"unicorn/consistent-destructuring": "off",
+			"unicorn/escape-case": ["error", "lowercase"],
 			"unicorn/explicit-length-check": "off",
 			"unicorn/filename-case": ["error", { case: "kebabCase" }],
 			"unicorn/no-array-callback-reference": "off",
 			"unicorn/no-array-reduce": "off",
 			"unicorn/no-await-expression-member": "off",
+			"unicorn/no-instanceof-builtins": ["error", { strategy: "strict" }],
 			"unicorn/no-keyword-prefix": "off",
 			"unicorn/no-nested-ternary": "off",
 			"unicorn/no-null": "off",
 			"unicorn/no-process-exit": "off",
 			"unicorn/no-unreadable-array-destructuring": "off",
-			"unicorn/number-literal-case": "off",
+			"unicorn/number-literal-case": ["error", { hexadecimalValue: "lowercase" }],
 			"unicorn/prefer-export-from": "off",
+			"unicorn/prefer-import-meta-properties": "off",
 			"unicorn/prefer-ternary": ["error", "only-single-line"],
 			"unicorn/prevent-abbreviations": [
 				"warn",
@@ -223,8 +251,9 @@ export default typescriptEslint.config(
 						function: { func: true },
 						mod: false,
 						pkg: false,
-						sa: { scratchAddons: true },
 						usr: { user: true },
+						util: false,
+						utils: false,
 					},
 				},
 			],
