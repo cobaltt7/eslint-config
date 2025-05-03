@@ -198,6 +198,7 @@ export default typescriptEslint.config(
 					selector: "TSIndexSignature",
 				},
 			],
+			"no-shadow-restricted-names": ["error", { reportGlobalThis: true }],
 			"no-sparse-arrays": "off",
 			"no-ternary": "off",
 			"no-undefined": "off",
