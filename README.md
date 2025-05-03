@@ -4,8 +4,7 @@ My ESLint style guide
 
 ## Adding To A Project
 
-0. Note that this style guide only works for TypeScript projects, so ensure you have TypeScript installed and configured
-   prior to setting up ESLint
+0. Note that this style guide only works for TypeScript projects, so ensure you have TypeScript installed and configured prior to setting up ESLint.
 
 1. Install the config by running:
 
@@ -33,7 +32,10 @@ My ESLint style guide
     	...cobaltConfigs,
     	{
     		languageOptions: {
-    			parserOptions: { projectService: true, tsconfigRootDir: path.dirname(fileURLToPath(import.meta.url)) },
+    			parserOptions: {
+    				projectService: true,
+    				tsconfigRootDir: path.dirname(fileURLToPath(import.meta.url)),
+    			},
     		},
     	},
     ]);
@@ -60,21 +62,23 @@ My ESLint style guide
 
     Make sure to put `globalIgnores` in the position indicated.
 
-5. Edit project-specific configuration, i.e. `languageOptions`, `rules`, and etcetera. Put all configuration in or after
-   the last object containing `languageOptions`. The `globals` package is re-exported in `eslint-config-cobaltt7`, so it
-   is unneccessary to reinstall it to modify global variables. Simply import it like so:
+5. Edit project-specific configuration, i.e. `languageOptions`, `rules`, and etcetera.
+   Put all configuration in or after the last object containing `languageOptions`.
+   The `globals` package is re-exported in `eslint-config-cobaltt7`, so it is unneccessary to reinstall it to modify global variables.
+   Simply import it like so:
 
     ```javascript
     import { globals } from "eslint-config-cobaltt7";
     ```
 
-6. To lint your code, simply run
+6. To lint your code, simply run:
 
     ```bash
     node --run lint
     ```
 
-Congrats! You've successfully integrated ESLint into your project with `eslint-config-cobaltt7`!
+Congrats!
+You've successfully integrated ESLint into your project with `eslint-config-cobaltt7`!
 
 ## Importing specific configurations
 
@@ -89,5 +93,4 @@ configs.declarations;
 configs.tests;
 ```
 
-Please note that, with the exeption of `global`, all of these configs include `files` overrides that may need to be
-overridden for the config to behave as expected.
+Please note that, with the exeption of `global`, all of these configs include `files` overrides that may need to be overridden for the config to behave as expected.
