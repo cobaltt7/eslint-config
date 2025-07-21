@@ -45,7 +45,6 @@ export default typescriptEslint.config(
 			"@typescript-eslint/init-declarations": "off",
 			"@typescript-eslint/max-params": ["warn", { max: 4 }],
 			"@typescript-eslint/member-ordering": "off",
-			"@typescript-eslint/method-signature-style": ["error", "method"],
 			"@typescript-eslint/naming-convention": [
 				// TODO: look into different types
 				"error",
@@ -205,6 +204,7 @@ export default typescriptEslint.config(
 			"no-underscore-dangle": "off",
 			"no-void": "off",
 			"no-warning-comments": ["warn", { location: "anywhere" }],
+			"object-shorthand": ["error", "always", { avoidExplicitReturnArrows: true }],
 			"one-var": ["error", { initialized: "never", uninitialized: "always" }],
 			"require-atomic-updates": "off",
 			"require-unicode-regexp": "off",
