@@ -18,7 +18,7 @@ My ESLint style guide
     "scripts": { "lint": "eslint" }
     ```
 
-3. Create an **eslint.config.js** file with the following content:
+3. Create an `eslint.config.js` file with the following content:
 
     ```javascript
     import path from "node:path";
@@ -54,7 +54,7 @@ My ESLint style guide
 
      export default defineConfig([
      	{ files: ["./**/*.ts"] },
-    +	globalIgnores(["./dist"]),
+    +	globalIgnores(["dist"]),
      	...cobaltConfigs,
      	{
      		languageOptions: {
