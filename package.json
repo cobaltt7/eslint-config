@@ -31,7 +31,7 @@
 		"prettier": "3.6.2"
 	},
 	"peerDependencies": {
-		"eslint": "^9.26.0"
+		"eslint": "^9.32.0"
 	},
 	"engines": {
 		"node": "^22.10.0",
