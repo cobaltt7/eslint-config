@@ -5,6 +5,7 @@ import typescriptEslint from "typescript-eslint";
 
 export default defineConfig(
 	{ name: "eslint/js/all", ...js.configs.all },
+	// @ts-expect-error -- This is valid
 	...typescriptEslint.configs.all,
 	unicorn.configs.all,
 	{
