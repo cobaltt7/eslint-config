@@ -22,13 +22,14 @@ jobs:
             - name: Setup Node.JS
               uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
               with:
+                  node-version: ">=22.10"
                   cache: npm
 
             - name: Install
               run: npm ci
 
             - name: Format
-              run: npm run format
+              run: node --run format
 
             - name: Assert clean
               if: startsWith(github.ref_name, 'dependabot/') == true
