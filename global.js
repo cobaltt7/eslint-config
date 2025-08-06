@@ -81,6 +81,7 @@ export default typescriptEslint.config(
 					selector: ["typeParameter"],
 				},
 			],
+			"@typescript-eslint/no-base-to-string": ["error", { checkUnknown: true }],
 			"@typescript-eslint/no-deprecated": "warn",
 			"@typescript-eslint/no-empty-object-type": ["error", { allowInterfaces: "always" }],
 			"@typescript-eslint/no-floating-promises": ["error", { checkThenables: true }],
