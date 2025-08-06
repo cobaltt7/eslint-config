@@ -7,5 +7,6 @@ export default defineConfig({
 		"@typescript-eslint/consistent-type-definitions": "off",
 		"@typescript-eslint/naming-convention": "off",
 		"@typescript-eslint/no-unused-vars": "off",
+		"one-var": ["error", "never"],
 	},
 });
