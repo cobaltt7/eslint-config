@@ -180,7 +180,8 @@ export default typescriptEslint.config(
 			],
 			"no-implicit-coercion": [
 				"error",
-				{ allow: ["!!", "+"], disallowTemplateShorthand: true },
+				{ allow: ["!!", "+"] },
+				// Template shorthand is handled by @typescript-eslint/no-unnecessary-template-expression
 			],
 			"no-inline-comments": "off",
 			"no-labels": "off",
