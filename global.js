@@ -9,15 +9,15 @@ export default defineConfig(
 	...typescriptEslint.configs.all,
 	unicorn.configs.all,
 	{
-		name: "cobaltt7/global",
 		linterOptions: {
 			reportUnusedDisableDirectives: "error",
 			reportUnusedInlineConfigs: "error",
 		},
+		name: "cobaltt7/global",
 		rules: {
 			"@typescript-eslint/class-methods-use-this": [
 				"error",
-				{ ignoreOverrideMethods: true, ignoreClassesThatImplementAnInterface: true },
+				{ ignoreClassesThatImplementAnInterface: true, ignoreOverrideMethods: true },
 			],
 			"@typescript-eslint/consistent-return": "off",
 			"@typescript-eslint/consistent-type-assertions": [
@@ -28,10 +28,6 @@ export default defineConfig(
 				},
 			],
 			"@typescript-eslint/consistent-type-definitions": ["error", "type"],
-			"@typescript-eslint/explicit-module-boundary-types": [
-				"error",
-				{ allowOverloadFunctions: true },
-			],
 			"@typescript-eslint/explicit-function-return-type": [
 				"error",
 				{
@@ -43,6 +39,10 @@ export default defineConfig(
 			"@typescript-eslint/explicit-member-accessibility": [
 				"error",
 				{ accessibility: "no-public", overrides: { parameterProperties: "explicit" } },
+			],
+			"@typescript-eslint/explicit-module-boundary-types": [
+				"error",
+				{ allowOverloadFunctions: true },
 			],
 			"@typescript-eslint/init-declarations": "off",
 			"@typescript-eslint/max-params": ["warn", { max: 4 }],

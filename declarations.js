@@ -1,8 +1,8 @@
 import { defineConfig } from "eslint/config";
 
 export default defineConfig({
-	name: "cobaltt7/declarations",
 	files: ["**/*.d.ts"],
+	name: "cobaltt7/declarations",
 	rules: {
 		"@typescript-eslint/consistent-type-definitions": "off",
 		"@typescript-eslint/naming-convention": "off",

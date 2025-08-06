@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { defineConfig } from "eslint/config";
 import globals from "globals";
 import typescriptEslint from "typescript-eslint";
@@ -12,8 +13,8 @@ export { globals };
 export const declareConfig = typescriptEslint.config;
 export default [globalConfigs, configsConfigs, declarationsConfigs, testsConfigs];
 export const configs = {
-	global: globalConfigs,
 	configs: configsConfigs,
 	declarations: declarationsConfigs,
+	global: globalConfigs,
 	tests: testsConfigs,
 };
