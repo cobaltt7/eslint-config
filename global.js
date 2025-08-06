@@ -1,8 +1,9 @@
 import js from "@eslint/js";
 import unicorn from "eslint-plugin-unicorn";
+import { defineConfig } from "eslint/config";
 import typescriptEslint from "typescript-eslint";
 
-export default typescriptEslint.config(
+export default defineConfig(
 	{ name: "eslint/js/all", ...js.configs.all },
 	...typescriptEslint.configs.all,
 	unicorn.configs.all,

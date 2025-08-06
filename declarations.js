@@ -1,6 +1,6 @@
-import typescriptEslint from "typescript-eslint";
+import { defineConfig } from "eslint/config";
 
-export default typescriptEslint.config({
+export default defineConfig({
 	name: "cobaltt7/declarations",
 	files: ["**/*.d.ts"],
 	rules: {

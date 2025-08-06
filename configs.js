@@ -1,7 +1,7 @@
+import { defineConfig } from "eslint/config";
 import globals from "globals";
-import typescriptEslint from "typescript-eslint";
 
-export default typescriptEslint.config({
+export default defineConfig({
 	name: "cobaltt7/configs",
 	files: ["**/*.config.js"],
 	languageOptions: { globals: globals.nodeBuiltin },
