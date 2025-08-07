@@ -20,13 +20,6 @@ export default defineConfig(
 				{ ignoreClassesThatImplementAnInterface: true, ignoreOverrideMethods: true },
 			],
 			"@typescript-eslint/consistent-return": "off",
-			"@typescript-eslint/consistent-type-assertions": [
-				"error",
-				{
-					arrayLiteralTypeAssertions: "allow-as-parameter",
-					objectLiteralTypeAssertions: "allow-as-parameter",
-				},
-			],
 			"@typescript-eslint/consistent-type-definitions": ["error", "type"],
 			"@typescript-eslint/explicit-function-return-type": [
 				"error",
@@ -47,6 +40,7 @@ export default defineConfig(
 			"@typescript-eslint/init-declarations": "off",
 			"@typescript-eslint/max-params": ["warn", { max: 4 }],
 			"@typescript-eslint/member-ordering": "off",
+			"@typescript-eslint/method-signature-style": ["error", "method"],
 			"@typescript-eslint/naming-convention": [
 				// TODO: look into different types
 				"error",
