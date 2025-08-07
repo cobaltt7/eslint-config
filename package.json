@@ -15,7 +15,8 @@
 	"main": "index.js",
 	"scripts": {
 		"format": "prettier --write \"**\" \"!./dist/\" --ignore-unknown --cache",
-		"lint": "eslint"
+		"lint": "eslint",
+		"types": "tsc --project tsconfig.json"
 	},
 	"prettier": "@redguy12/prettier-config",
 	"dependencies": {
