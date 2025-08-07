@@ -2,7 +2,7 @@ import { defineConfig } from "eslint/config";
 import globals from "globals";
 
 export default defineConfig({
-	files: ["**/*.config.js"],
+	files: ["**/*.config.js", "**/*rc.js"],
 	languageOptions: { globals: globals.nodeBuiltin },
 	name: "cobaltt7/configs",
 	rules: {
