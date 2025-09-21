@@ -20,6 +20,5 @@
 		"verbatimModuleSyntax": true
 	},
 	"exclude": ["./.git", "./node_modules"],
-	"include": ["**/.*", "**/.*/**/.*", "**/.*/**/*", "**/*"],
-	"typeAcquisition": { "enable": true }
+	"include": ["**/.*", "**/.*/**/.*", "**/.*/**/*", "**/*"]
 }
