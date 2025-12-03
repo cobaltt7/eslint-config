@@ -1,0 +1,1 @@
+{ "packageRules": [{ "matchDepTypes": ["peerDependencies"], "rangeStrategy": "bump" }] }
