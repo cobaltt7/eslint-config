@@ -29,7 +29,7 @@
 	"devDependencies": {
 		"@redguy12/prettier-config": "3.4.4",
 		"eslint": "9.34.0",
-		"prettier": "3.7.1",
+		"prettier": "3.8.1",
 		"typescript": "5.9.3"
 	},
 	"peerDependencies": {
