@@ -20,7 +20,7 @@
 	},
 	"prettier": "@redguy12/prettier-config",
 	"dependencies": {
-		"@eslint/js": "9.34.0",
+		"@eslint/js": "10.0.1",
 		"@types/node": "<=22.10",
 		"eslint-plugin-unicorn": "60.0.0",
 		"globals": "16.5.0",
@@ -28,12 +28,12 @@
 	},
 	"devDependencies": {
 		"@redguy12/prettier-config": "3.4.4",
-		"eslint": "9.34.0",
+		"eslint": "10.0.0",
 		"prettier": "3.7.1",
 		"typescript": "5.9.3"
 	},
 	"peerDependencies": {
-		"eslint": "^9.32.0"
+		"eslint": "^10.0.0"
 	},
 	"engines": {
 		"node": "^22.10.0",
