@@ -30,7 +30,7 @@
 		"@redguy12/prettier-config": "3.4.4",
 		"eslint": "9.34.0",
 		"prettier": "3.7.1",
-		"typescript": "5.9.3"
+		"typescript": "6.0.3"
 	},
 	"peerDependencies": {
 		"eslint": "^9.32.0"
