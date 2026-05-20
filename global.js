@@ -226,6 +226,7 @@ export default defineConfig(
 			"unicorn/number-literal-case": ["error", { hexadecimalValue: "lowercase" }],
 			"unicorn/prefer-export-from": "off",
 			"unicorn/prefer-import-meta-properties": "off",
+			// "unicorn/prefer-query-selector": ["error", { allowWithVariables: true }], // unicorn v65
 			"unicorn/prefer-ternary": ["error", "only-single-line"],
 			"unicorn/prevent-abbreviations": [
 				"warn",
@@ -266,6 +267,7 @@ export default defineConfig(
 					},
 				},
 			],
+			"unicorn/text-encoding-identifier-case": ["error", { withDash: true }],
 			"yoda": ["error", "never", { exceptRange: true }],
 		},
 	},
