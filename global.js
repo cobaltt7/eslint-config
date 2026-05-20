@@ -37,7 +37,7 @@ export default defineConfig(
 				{ allowOverloadFunctions: true },
 			],
 			"@typescript-eslint/init-declarations": "off",
-			"@typescript-eslint/max-params": ["warn", { max: 4 }],
+			"@typescript-eslint/max-params": ["warn", { max: 4 }], // todo: countThis: never
 			"@typescript-eslint/member-ordering": "off",
 			"@typescript-eslint/method-signature-style": ["error", "method"],
 			"@typescript-eslint/naming-convention": [
