@@ -131,6 +131,7 @@ export default defineConfig(
 			],
 			"@typescript-eslint/return-await": ["error", "always"],
 			"@typescript-eslint/strict-boolean-expressions": "off",
+			"@typescript-eslint/strict-void-return": "off",
 			"@typescript-eslint/switch-exhaustiveness-check": [
 				"error",
 				{
