@@ -8,6 +8,7 @@
 		"forceConsistentCasingInFileNames": true,
 		"incremental": true,
 		"isolatedModules": true,
+		"lib": ["ES2023"],
 		"module": "Node20",
 		"noEmit": true,
 		"noErrorTruncation": true,
@@ -15,6 +16,7 @@
 		"noUncheckedIndexedAccess": true,
 		"resolveJsonModule": true,
 		"strict": true,
+		"target": "ES2023",
 		"types": ["node"],
 		"verbatimModuleSyntax": true
 	},

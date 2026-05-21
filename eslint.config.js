@@ -14,6 +14,7 @@ export default defineConfig([
 		languageOptions: {
 			globals: globals.nodeBuiltin,
 			parserOptions: {
+				ecmaVersion: 2023,
 				projectService: true,
 				tsconfigRootDir: path.dirname(fileURLToPath(import.meta.url)),
 			},
