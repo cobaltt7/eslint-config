@@ -21,7 +21,7 @@
 	"prettier": "@redguy12/prettier-config",
 	"dependencies": {
 		"@eslint/js": "~10.0.1",
-		"@types/node": "<=20.19",
+		"@types/node": "<=24.19",
 		"eslint-plugin-unicorn": "~64.0.0",
 		"globals": "~17.8.0",
 		"typescript-eslint": "~8.65.0"
