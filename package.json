@@ -28,12 +28,12 @@
 	},
 	"devDependencies": {
 		"@redguy12/prettier-config": "3.4.5",
-		"eslint": "10.8.0",
+		"eslint": "10.10.0",
 		"prettier": "3.9.6",
 		"typescript": "6.0.3"
 	},
 	"peerDependencies": {
-		"eslint": "^10.8.0"
+		"eslint": "^10.10.0"
 	},
 	"engines": {
 		"node": ">=20.19.0",
